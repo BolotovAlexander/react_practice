@@ -1,0 +1,158 @@
+/*** basic variables for all page ***/
+
+@color-lightNavBar: #32425c;   /* basic color */
+@color-darkNavBar: (@color-lightNavBar - #090e13);
+@color-deepDarkNavBar: (@color-lightNavBar - #111822);
+@color-darkNavBarBefore: (@color-lightNavBar - #1c2638);
+
+@color-linkTechnomart: #ee3643; /* basic color */
+@color-linkTechnomartHover: (@color-linkTechnomart - #240a0c);
+@color-linkTechnomartActive: (@color-linkTechnomart - #340f11);
+@color-linkTechnomartAfter: (@color-linkTechnomart - #390d10);
+@color-linkTechnomartAfterHover: (@color-linkTechnomartHover - #390d10);
+@color-linkTechnomartAfterActive: (@color-linkTechnomartActive - #390d10);
+
+@color-buttonCreateOrder: #60a944; /* basic color */
+@color-buttonCreateOrderHover: (@color-buttonCreateOrder + rgb(27, 37, 10));
+@color-buttonCreateOrderActive:(@color-buttonCreateOrder - #0f2410);
+@color-buttonBuyAfter: (@color-buttonCreateOrder - #2a362f);
+
+
+@color-textYello: #ffd180;
+@color-textWhite: #ffff;
+@color-textGray: gray;
+
+@color-itemCardBorder: #eaeaea; /* basic color */
+@color-logoGray: @color-itemCardBorder - #3b3b3b;
+
+@color-popularGoodsBrandsBackground: #f9f5f0;
+@color-headerBackground: #f3f7f9;
+@color-mainBackground: #ffffff;
+@color-serviceBackground: #f4f8f9;
+@color-mainCatalogNav: #f7f3ec;
+
+/*** colors of cards around the slider ***/
+@color-navSectionMaterials: #ffbf47;
+@color-navSectionDelivery: #ffc047;
+@color-navSectionInstruments: #3bbce3;
+@color-navSectionTechnics: #dc91d8;
+@color-navSectionDiscounts: #8ed78f;
+
+/*** basic fonts***/
+.variable-font-14() {
+ font: 14px Cuprum;
+}
+
+.variable-font-16() {
+  font: 16px Cuprum;
+}
+
+.variable-font-17() {
+  font: 17px Cuprum;
+}
+
+.variable-font-18() {
+  font: 18px Cuprum;
+}
+
+/*** mixins and basic style settings ***/
+.variable-width-basic() {
+  min-width: 830px;
+  max-width: 940px;
+  margin: auto;
+}
+
+.variable-visually-hidden() {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.variable-style-flex-row-space-between() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.variable-style-flex-row-start() {
+  display: flex; 
+  flex-direction: row;
+  justify-content: start;
+}
+
+.variable-style-flex-column-space-between() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.variable-style-flex-column-flex-end() {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.variable-header-button-login-registration() {
+  border: medium none;
+  background: transparent;
+  background-color: @color-textWhite;
+  font: 21px cuprum;
+  color: black;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  .variable-style-flex-column-space-between;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  color: @color-linkTechnomart;
+  font: italic 100% cuprum;
+  margin: 0;
+}
+
+h2 {
+  color: @color-lightNavBar;
+  font: 30px cuprum;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  .variable-visually-hidden;
+}
+
+
+/*** page structure, import of components styles ***/
+
+@import "./styles/styleHeader.less";
+
+@import "./styles/styleMainIndex.less";
+
+@import "./styles/styleFooter.less";
